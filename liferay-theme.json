@@ -1,0 +1,11 @@
+{
+  "LiferayTheme": {
+    "appServerPath": "/Users/ryan/Desktop/dxp/tomcat",
+    "deployPath": "/Users/ryan/Desktop/dxp/deploy",
+    "url": "http://localhost:8080",
+    "appServerPathPlugin": "/Users/ryan/repos/rhc-theme/.web_bundle_build",
+    "deployed": true,
+    "pluginName": "rhc-theme",
+    "webBundleDir": "watching"
+  }
+}

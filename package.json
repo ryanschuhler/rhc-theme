@@ -1,0 +1,25 @@
+{
+  "name": "rhc-theme",
+  "version": "1.0.0",
+  "keywords": [
+    "liferay-theme"
+  ],
+  "liferayTheme": {
+    "baseTheme": "styled",
+    "screenshot": "",
+    "templateLanguage": "ftl",
+    "version": "7.0",
+    "rubySass": true
+  },
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-ruby-sass": "^2.1.1",
+    "liferay-theme-tasks": "*"
+  },
+  "publishConfig": {
+    "tag": "7_0_x"
+  },
+  "devDependencies": {
+    "liferay-theme-deps-7.0": "^1.2.1"
+  }
+}

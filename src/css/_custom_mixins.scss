@@ -1,0 +1,23 @@
+/* ---------- Color ---------- */
+
+@mixin color-util($name, $color) {
+	.background-#{$name} {
+		background-color: $color;
+	}
+
+	.border-#{$name} {
+		border-color: $color;
+	}
+
+	.color-#{$name} {
+		color: $color;
+	}
+
+	.fill-#{$name} {
+		fill: $color;
+	}
+
+	.stroke-#{$name} {
+		stroke: $color;
+	}
+}

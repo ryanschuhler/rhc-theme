@@ -1,0 +1,439 @@
+/* ---------- Borders ---------- */
+
+.ba, .bt, .br, .bb, .bl, .bn {
+	border: 0 solid $colorDarkAlt;
+}
+
+.ba {
+	border-width: $borderWidth;
+}
+
+.bt {
+	border-top-width: $borderWidth;
+}
+
+.br {
+	border-right-width: $borderWidth;
+}
+
+.bb {
+	border-bottom-width: $borderWidth;
+}
+
+.bl {
+	border-bottom-width: $borderWidth;
+}
+
+/* ---------- Colors ---------- */
+
+ @include color-util(dark, $colorDark);
+ @include color-util(dark-alt, $colorDarkAlt);
+ @include color-util(error, $colorError);
+ @include color-util(light, $colorLight);
+ @include color-util(light-alt, $colorLightAlt);
+ @include color-util(neutral, $colorNeutral);
+ @include color-util(positive, $colorPositive);
+ @include color-util(primary, $colorPrimary);
+ @include color-util(secondary, $colorSecondary);
+ @include color-util(tertiary, $colorTertiary);
+
+/* ---------- Flexbox ---------- */
+
+.flex {
+	@include display(flex);
+}
+
+.flex-auto {
+	@include flex(1);
+}
+
+.flex-column {
+	@include flex-direction(column);
+}
+
+.flex-row {
+	@include flex-direction(row);
+}
+
+.items-start {
+	@include align-items(flex-start);
+}
+
+.items-end {
+	@include align-items(flex-end);
+}
+
+.items-center {
+	@include align-items(center);
+}
+
+.items-baseline {
+	@include align-items(baseline);
+}
+
+.items-stretch {
+	@include align-items(stretch);
+}
+
+.justify-start {
+	@include justify-content(flext-start);
+}
+
+.justify-end {
+	@include justify-content(flext-end);
+}
+
+.justify-center {
+	@include justify-content(center);
+}
+
+.justify-between {
+	@include justify-content(space-between);
+}
+
+.justify-around {
+	@include justify-content(space-around);
+}
+
+.order-0 {
+	@include order(0);
+}
+
+.order-1 {
+	@include order(1);
+}
+
+.order-2 {
+	@include order(2);
+}
+
+.order-3 {
+	@include order(3);
+}
+
+.order-4 {
+	@include order(4);
+}
+
+.order-5 {
+	@include order(5);
+}
+
+.order-6 {
+	@include order(6);
+}
+
+.order-7 {
+	@include order(7);
+}
+
+.order-8 {
+	@include order(8);
+}
+
+.order-9 {
+	@include order(9);
+}
+
+.order-last {
+	@include order(last);
+}
+
+
+/* ---------- Opacity ---------- */
+
+.o-100 {
+	opacity: 1;
+}
+
+.o-90 {
+	opacity: .9;
+}
+
+.o-80 {
+	opacity: .8;
+}
+
+.o-70 {
+	opacity: .7;
+}
+
+.o-60 {
+	opacity: .6;
+}
+
+.o-50 {
+	opacity: .5;
+}
+
+.o-40 {
+	opacity: .4;
+}
+
+.o-30 {
+	opacity: .3;
+}
+
+.o-20 {
+	opacity: .2;
+}
+
+.o-10 {
+	opacity: .1;
+}
+
+.o-0 {
+	opacity: 0;
+}
+
+/* ---------- Spacing ---------- */
+
+.pa {
+	padding: $spacingStandard;
+}
+
+.pa-lg {
+	padding: $spacingLarge;
+}
+
+.pa-sm {
+	padding: $spacingSmall;
+}
+
+.pa-none {
+	padding: 0;
+}
+
+.pt {
+	padding-top: $spacingStandard;
+}
+
+.pt-lg {
+	padding-top: $spacingLarge;
+}
+
+.pt-sm {
+	padding-top: $spacingSmall;
+}
+
+.pt-none {
+	padding-top: 0;
+}
+
+.pr {
+	padding-right: $spacingStandard;
+}
+
+.pr-lg {
+	padding-right: $spacingLarge;
+}
+
+.pr-sm {
+	padding-right: $spacingSmall;
+}
+
+.pr-none {
+	padding-right: 0;
+}
+
+.pb {
+	padding-bottom: $spacingStandard;
+}
+
+.pb-lg {
+	padding-bottom: $spacingLarge;
+}
+
+.pb-sm {
+	padding-bottom: $spacingSmall;
+}
+
+.pb-none {
+	padding-bottom: 0;
+}
+
+.pl {
+	padding-left: $spacingStandard;
+}
+
+.pl-lg {
+	padding-left: $spacingLarge;
+}
+
+.pl-sm {
+	padding-left: $spacingSmall;
+}
+
+.pl-none {
+	padding-left: 0;
+}
+
+.ph {
+	padding: $spacingStandard inherit;
+}
+
+.ph-lg {
+	padding: $spacingLarge inherit;
+}
+
+.ph-sm {
+	padding: $spacingSmall inherit;
+}
+
+.ph-none {
+	padding: 0 inherit;
+}
+
+.pv {
+	padding: inherit $spacingStandard;
+}
+
+.pv-lg {
+	padding: inherit $spacingLarge;
+}
+
+.pv-sm {
+	padding: inherit $spacingSmall;
+}
+
+.pv-none {
+	padding: inherit 0;
+}
+
+/* ---------- Text ---------- */
+
+.tl {
+	text-align: left;
+}
+
+.tr {
+	text-align: right;
+}
+
+.tc {
+	text-align: center;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+.no-underline {
+	text-decoration: none;
+}
+
+/* ---------- Width ---------- */
+
+.w-10 {
+	width: 10%;
+}
+
+.w-15 {
+	width: 15%;
+}
+
+.w-20 {
+	width: 20%;
+}
+
+.w-25 {
+	width: 25%;
+}
+
+.w-30 {
+	width: 30%;
+}
+
+.w-33 {
+	width: 33%;
+}
+
+.w-35 {
+	width: 35%;
+}
+
+.w-40 {
+	width: 40%;
+}
+
+.w-45 {
+	width: 45%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-55 {
+	width: 55%;
+}
+
+.w-60 {
+	width: 60%;
+}
+
+.w-65 {
+	width: 65%;
+}
+
+.w-66 {
+	width: 66%;
+}
+
+.w-70 {
+	width: 70%;
+}
+
+.w-75 {
+	width: 75%;
+}
+
+.w-80 {
+	width: 80%;
+}
+
+.w-85 {
+	width: 85%;
+}
+
+.w-90 {
+	width: 90%;
+}
+
+.w-95 {
+	width: 95%;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.w-auto {
+	width: auto;
+}
+
+.max-full, .max-lg, .max-med, .max-sm {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0 $spacingStandard;
+}
+
+.max-full {
+	max-width: 1200px;
+}
+
+.max-lg {
+	max-width: 960px;
+}
+
+.max-med {
+	max-width: 720px;
+}
+
+.max-sm {
+	max-width: 480px;
+}
