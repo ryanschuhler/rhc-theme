@@ -1,0 +1,106 @@
+a {
+	color: $colorPrimary;
+
+	&:hover, :focus {
+		color: darken($colorPrimary, 5%);
+	}
+}
+
+.btn {
+	box-shadow: none;
+	background: $colorPrimary;
+	color: $colorLight;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.25rem;
+	font-weight: 500;
+	height: auto;
+	line-height: $lineHeight;
+	overflow: hidden;
+	padding: $spacingSmall $spacingStandard;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	vertical-align: top;
+	z-index: 1;
+
+	&:active, &:focus, &:hover {
+		color: $colorLight;
+		outline: none;
+	}
+
+	&:focus, &:hover {
+		background-color: darken($colorPrimary, 5%);
+	}
+
+	&:active {
+		background-color: darken($colorPrimary, 10%);
+	}
+
+	&.btn-light {
+		background-color: $colorLight;
+		border-color: $colorLight;
+		color: $colorDark;
+
+		&:focus, &:hover {
+			background-color: darken($colorLight, 5%);;
+		}
+
+		&:active {
+			background-color: darken($colorLight, 10%);;
+		}
+	}
+
+	&.btn-secondary {
+		background-color: $colorSecondary;
+		border-color: $colorSecondary;
+
+		&:focus, &:hover {
+			background-color: darken($colorSecondary, 5%);
+		}
+
+		&:active {
+			background-color: darken($colorSecondary, 10%);
+		}
+	}
+
+	&.btn-sm {
+		padding: 0.25rem $spacingSmall;
+	}
+}
+
+.cta {
+	color: $colorPrimary;
+	cursor: pointer;
+	font-weight: 500;
+
+	&:active, &:focus, &:hover {
+		color: darken($colorPrimary, 5%);
+		text-decoration: none;
+
+		.cta-icon {
+			@include transform(translateX($spacingSmall));
+		}
+	}
+
+	&.cta-light {
+		color: $colorLight;
+
+		&:active, &:focus, &:hover {
+			color: darken($colorLight, 5%);
+		}
+	}
+
+	&.cta-secondary {
+		color: $colorSecondary;
+
+		&:active, &:focus, &:hover {
+			color: darken($colorSecondary, 5%);
+		}
+	}
+
+	.cta-icon {
+		@include transition(transform 0.5s);
+	}
+}

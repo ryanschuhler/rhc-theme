@@ -1,5 +1,3 @@
-/* ---------- Color ---------- */
-
 @mixin color-util($name, $color) {
 	.background-#{$name} {
 		background-color: $color;

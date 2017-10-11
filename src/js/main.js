@@ -1,0 +1,5 @@
+Liferay.on(
+	'allPortletsReady',
+	function() {
+	}
+);
