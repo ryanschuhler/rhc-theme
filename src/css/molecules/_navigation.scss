@@ -1,0 +1,74 @@
+#banner {
+	border-bottom: $borderWidth solid $colorDark;
+
+	.banner-wrapper {
+		background: $colorPrimary;
+	}
+
+	.banner-content {
+		padding: $spacingSmall $spacingStandard;
+
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(space-between);
+
+		a {
+			color: $colorLight;
+		}
+	}
+
+	.child-nav-wrapper {
+		padding: $spacingSmall;
+
+		a {
+			color: $colorDark;
+		}
+	}
+
+	ul {
+		margin: 0;
+		width: 100%;
+
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(flex-end);
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		padding: $spacingSmall;
+		text-decoration: none;
+	}
+
+	.logo img {
+		height: 40px;
+		width: auto;
+	}
+}
+
+#footer {
+	background: $colorDark;
+	color: $colorLight;
+
+	.footer-content {
+		margin: 0 auto;
+		max-width: $maxFull;
+		padding: $spacingStandard;
+
+		@include display(flex);
+		@include align-items(stretch);
+		@include justify-content(space-between);
+	}
+
+	.logo {
+		height: 30px;
+		width: auto;
+	}
+
+	.tagline {
+		max-width: $maxExtraSmall;
+	}
+}

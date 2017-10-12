@@ -423,17 +423,17 @@
 }
 
 .max-full {
-	max-width: 1200px;
+	max-width: $maxFull;
 }
 
 .max-lg {
-	max-width: 960px;
+	max-width: $maxLarge;
 }
 
 .max-med {
-	max-width: 720px;
+	max-width: $maxMedium;
 }
 
 .max-sm {
-	max-width: 480px;
+	max-width: $maxSmall;
 }
