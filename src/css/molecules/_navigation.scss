@@ -2,7 +2,7 @@
 	border-bottom: $borderWidth solid $colorDark;
 
 	.banner-wrapper {
-		background: $colorPrimary;
+		background: rgba(red($colorPrimary), green($colorPrimary), blue($colorPrimary), .8);
 	}
 
 	.banner-content {
@@ -17,9 +17,20 @@
 		}
 	}
 
-	.child-nav-wrapper {
-		padding: $spacingSmall;
+	.child-menu {
+		max-height: 0;
+		overflow: hidden;
 
+		@include transition(max-height .5s .5s);
+	}
+
+	.nav-item-0 .nav-item-0, .nav-item-1 .nav-item-1, .nav-item-2 .nav-item-2, .nav-item-3 .nav-item-3, .nav-item-4 .nav-item-4 {
+		max-height: 50px;
+
+		@include transition-delay(0);
+	}
+
+	.child-nav-wrapper {
 		a {
 			color: $colorDark;
 		}
