@@ -1,11 +1,6 @@
-Liferay.on(
-	'allPortletsReady',
-	function() {
-	}
-);
-
-var navItems = document.querySelectorAll('#banner .root-nav-item');
-var childNavWrapper = document.querySelector('#banner .child-nav-wrapper');
+var banner = document.querySelector('#banner');
+var navItems = banner.querySelectorAll('.root-nav-item');
+var childNavWrapper = banner.querySelector('.child-nav-wrapper');
 
 for (i = 0; i < navItems.length; i++) {
 	var item = navItems[i];
@@ -13,14 +8,14 @@ for (i = 0; i < navItems.length; i++) {
 	item.addEventListener(
 		"mouseenter",
 		function(event) {
-			childNavWrapper.classList.add(event.currentTarget.getAttribute('data-child-class'));
+			banner.className = event.currentTarget.getAttribute('data-child-class');
 		}
 	);
 
-	item.addEventListener(
+	banner.addEventListener(
 		"mouseleave",
 		function(event) {
-			childNavWrapper.classList.remove(event.currentTarget.getAttribute('data-child-class'));
+			banner.className = '';
 		}
 	);
 }

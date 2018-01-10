@@ -7,9 +7,10 @@ a {
 }
 
 .btn {
+	border-radius: 300px;
 	box-shadow: none;
-	background: $colorPrimary;
-	color: $colorLight;
+	background: $colorLightAlt;
+	color: $colorDark;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1.25rem;
@@ -26,22 +27,20 @@ a {
 	z-index: 1;
 
 	&:active, &:focus, &:hover {
-		color: $colorLight;
 		outline: none;
 	}
 
 	&:focus, &:hover {
-		background-color: darken($colorPrimary, 5%);
+		background-color: darken($colorLightAlt, 5%);
 	}
 
 	&:active {
-		background-color: darken($colorPrimary, 10%);
+		background-color: darken($colorLightAlt, 10%);
 	}
 
 	&.btn-light {
 		background-color: $colorLight;
 		border-color: $colorLight;
-		color: $colorDark;
 
 		&:focus, &:hover {
 			background-color: darken($colorLight, 5%);;

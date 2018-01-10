@@ -1,8 +1,11 @@
 #banner {
 	border-bottom: $borderWidth solid $colorDark;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
 
 	.banner-wrapper {
-		background: rgba(red($colorPrimary), green($colorPrimary), blue($colorPrimary), .8);
+		background: rgba(red($colorPrimary), green($colorPrimary), blue($colorPrimary), .95);
 	}
 
 	.banner-content {
@@ -24,13 +27,15 @@
 		@include transition(max-height .5s .5s);
 	}
 
-	.nav-item-0 .nav-item-0, .nav-item-1 .nav-item-1, .nav-item-2 .nav-item-2, .nav-item-3 .nav-item-3, .nav-item-4 .nav-item-4 {
+	&.nav-item-0 .nav-item-0, &.nav-item-1 .nav-item-1, &.nav-item-2 .nav-item-2, &.nav-item-3 .nav-item-3, &.nav-item-4 .nav-item-4 {
 		max-height: 50px;
 
 		@include transition-delay(0);
 	}
 
 	.child-nav-wrapper {
+		background: rgba(red($colorLight), green($colorLight), blue($colorLight), .95);
+
 		a {
 			color: $colorDark;
 		}
