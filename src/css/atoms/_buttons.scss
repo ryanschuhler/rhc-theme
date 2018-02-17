@@ -17,8 +17,9 @@ a {
 	font-weight: 500;
 	height: auto;
 	line-height: $lineHeight;
+	margin: $spacingStandard;
 	overflow: hidden;
-	padding: $spacingSmall $spacingStandard;
+	padding: $spacingTiny $spacingSmall;
 	position: relative;
 	text-align: center;
 	text-decoration: none;

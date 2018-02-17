@@ -9,6 +9,10 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
+	<#if theme_settings["custom-head-code"]?has_content>
+		${theme_settings["custom-head-code"]}
+	</#if>
+
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,400i,500,600,700" rel="stylesheet">
 
 	<@liferay_util["include"] page=top_head_include />
@@ -41,7 +45,22 @@
 		</#if>
 	</section>
 
-	<#include "${full_templates_path}/footer.ftl" />
+	<#if theme_settings["footer-content-article-id"]?has_content>
+		<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone") />
+		<#assign theme_groupID = htmlUtil.escape(theme_display.getCompanyGroupId()?string) />
+		<#assign VOID = freeMarkerPortletPreferences.setValue("groupId", "${group_id}") />
+		<#assign VOID = freeMarkerPortletPreferences.setValue("articleId", '${theme_settings["footer-content-article-id"]}') />
+
+		<footer id="footer" role="contentinfo">
+			<@liferay_portlet["runtime"]
+				defaultPreferences="${freeMarkerPortletPreferences}"
+				portletProviderAction=portletProviderAction.VIEW
+				instanceId='${theme_settings["footer-content-article-id"]}'
+				portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+		</footer>
+
+		${freeMarkerPortletPreferences.reset()}
+	</#if>
 </div>
 
 <@liferay_util["include"] page=body_bottom_include />

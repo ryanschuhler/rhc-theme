@@ -1,14 +1,17 @@
 @import "atoms/buttons";
+@import "atoms/fonts";
 @import "atoms/forms";
 @import "atoms/headings";
 
 & {
-	font-size: 16px;
+	font: $fontWeightDefault $baseUnit $fontStackDefault;
+	line-height: 1.5;
 }
 
 body {
 	color: $colorDark;
-	font: 400 18px/1.5 "Montserrat", Arial, Helvetica, sans-serif;
+	font-family: $fontStackDefault;
+	font-size: 18px;
 
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;

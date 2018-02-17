@@ -9,8 +9,6 @@
 	}
 
 	.banner-content {
-		padding: $spacingSmall $spacingStandard;
-
 		@include display(flex);
 		@include align-items(center);
 		@include justify-content(space-between);
@@ -25,6 +23,10 @@
 		overflow: hidden;
 
 		@include transition(max-height .5s .5s);
+
+		a {
+			padding: $spacingTiny;
+		}
 	}
 
 	&.nav-item-0 .nav-item-0, &.nav-item-1 .nav-item-1, &.nav-item-2 .nav-item-2, &.nav-item-3 .nav-item-3, &.nav-item-4 .nav-item-4 {
@@ -68,23 +70,4 @@
 #footer {
 	background: $colorDark;
 	color: $colorLight;
-
-	.footer-content {
-		margin: 0 auto;
-		max-width: $maxFull;
-		padding: $spacingStandard;
-
-		@include display(flex);
-		@include align-items(stretch);
-		@include justify-content(space-between);
-	}
-
-	.logo {
-		height: 30px;
-		width: auto;
-	}
-
-	.tagline {
-		max-width: $maxExtraSmall;
-	}
 }

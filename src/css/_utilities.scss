@@ -24,6 +24,10 @@
 	border-bottom-width: $borderWidth;
 }
 
+.bs-bb {
+	box-sizing: border-box;
+}
+
 /* ---------- Colors ---------- */
 
  @include color-util(dark, $colorDark);
@@ -138,6 +142,13 @@
 	@include order(last);
 }
 
+.wrap {
+	@include flex-wrap(wrap);
+}
+
+.no-wrap {
+	@include flex-wrap(nowrap);
+}
 
 /* ---------- Opacity ---------- */
 
@@ -186,6 +197,126 @@
 }
 
 /* ---------- Spacing ---------- */
+
+.ma {
+	margin: $spacingStandard;
+}
+
+.ma-lg {
+	margin: $spacingLarge;
+}
+
+.ma-sm {
+	margin: $spacingSmall;
+}
+
+.ma-none {
+	margin: 0;
+}
+
+.mt {
+	margin-top: $spacingStandard;
+}
+
+.mt-lg {
+	margin-top: $spacingLarge;
+}
+
+.mt-sm {
+	margin-top: $spacingSmall;
+}
+
+.mt-none {
+	margin-top: 0;
+}
+
+.mr {
+	margin-right: $spacingStandard;
+}
+
+.mr-lg {
+	margin-right: $spacingLarge;
+}
+
+.mr-sm {
+	margin-right: $spacingSmall;
+}
+
+.mr-none {
+	margin-right: 0;
+}
+
+.mb {
+	margin-bottom: $spacingStandard;
+}
+
+.mb-lg {
+	margin-bottom: $spacingLarge;
+}
+
+.mb-sm {
+	margin-bottom: $spacingSmall;
+}
+
+.mb-none {
+	margin-bottom: 0;
+}
+
+.ml {
+	margin-left: $spacingStandard;
+}
+
+.ml-lg {
+	margin-left: $spacingLarge;
+}
+
+.ml-sm {
+	margin-left: $spacingSmall;
+}
+
+.ml-none {
+	margin-left: 0;
+}
+
+.mh {
+	margin-left: $spacingStandard;
+	margin-right: $spacingStandard;
+}
+
+.mh-lg {
+	margin-left: $spacingLarge;
+	margin-right: $spacingLarge;
+}
+
+.mh-sm {
+	margin-left: $spacingSmall;
+	margin-right: $spacingSmall;
+}
+
+.mh-none {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.mv {
+	margin-bottom: $spacingStandard;
+	margin-left: $spacingStandard;
+}
+
+.mv-lg {
+	margin-bottom: $spacingLarge;
+	margin-top: $spacingLarge;
+}
+
+.mv-sm {
+	margin-bottom: $spacingSmall;
+	margin-top: $spacingSmall;
+}
+
+.mv-none {
+	margin-bottom: 0;
+	margin-top: 0;
+}
 
 .pa {
 	padding: $spacingStandard;
@@ -268,35 +399,43 @@
 }
 
 .ph {
-	padding: $spacingStandard inherit;
+	padding-left: $spacingStandard;
+	padding-right: $spacingStandard;
 }
 
 .ph-lg {
-	padding: $spacingLarge inherit;
+	padding-left: $spacingLarge;
+	padding-right: $spacingLarge;
 }
 
 .ph-sm {
-	padding: $spacingSmall inherit;
+	padding-left: $spacingSmall;
+	padding-right: $spacingSmall;
 }
 
 .ph-none {
-	padding: 0 inherit;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .pv {
-	padding: inherit $spacingStandard;
+	padding-bottom: $spacingStandard;
+	padding-left: $spacingStandard;
 }
 
 .pv-lg {
-	padding: inherit $spacingLarge;
+	padding-bottom: $spacingLarge;
+	padding-top: $spacingLarge;
 }
 
 .pv-sm {
-	padding: inherit $spacingSmall;
+	padding-bottom: $spacingSmall;
+	padding-top: $spacingSmall;
 }
 
 .pv-none {
-	padding: inherit 0;
+	padding-bottom: 0;
+	padding-top: 0;
 }
 
 /* ---------- Text ---------- */

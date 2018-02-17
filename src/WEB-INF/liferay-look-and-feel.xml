@@ -7,5 +7,10 @@
 	</compatibility>
 	<theme id="rhc-theme" name="Redemption Hill Theme">
 		<template-extension>ftl</template-extension>
+		<settings>
+			<setting configurable="true" key="custom-head-code" type="textarea" value="" />
+			<setting configurable="true" key="footer-content-article-id" value="" />
+			<setting key="portlet-setup-show-borders-default" value="false" />
+		</settings>
 	</theme>
 </look-and-feel>
