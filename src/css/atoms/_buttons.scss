@@ -1,8 +1,15 @@
 a {
 	color: $colorPrimary;
 
+	@include transition(color 0.25s);
+
 	&:hover, :focus {
-		color: darken($colorPrimary, 5%);
+		color: $colorSecondary;
+		text-decoration: none;
+	}
+
+	&:active {
+		color: darken($colorSecondary, 10%);
 	}
 }
 
@@ -19,7 +26,7 @@ a {
 	line-height: $lineHeight;
 	margin: $spacingStandard;
 	overflow: hidden;
-	padding: $spacingTiny $spacingSmall;
+	padding: $spacingTiny $spacingStandard;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -27,21 +34,24 @@ a {
 	vertical-align: top;
 	z-index: 1;
 
+	@include transition(background 0.25s);
+
 	&:active, &:focus, &:hover {
 		outline: none;
 	}
 
 	&:focus, &:hover {
-		background-color: darken($colorLightAlt, 5%);
+		background-color: $colorSecondary;
+		color: $colorLight;
 	}
 
 	&:active {
-		background-color: darken($colorLightAlt, 10%);
+		background-color: darken($colorSecondary, 10%);
+		color: $colorLight;
 	}
 
 	&.btn-light {
 		background-color: $colorLight;
-		border-color: $colorLight;
 
 		&:focus, &:hover {
 			background-color: darken($colorLight, 5%);;

@@ -1,10 +1,9 @@
 @import "atoms/buttons";
-@import "atoms/fonts";
 @import "atoms/forms";
 @import "atoms/headings";
 
 & {
-	font: $fontWeightDefault $baseUnit $fontStackDefault;
+	font: normal $baseUnit $fontStackDefault;
 	line-height: 1.5;
 }
 
@@ -15,8 +14,20 @@ body {
 
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+
+	&.controls-visible.signed-in #content {
+		padding-top: 7rem;
+	}
+}
+
+#content {
+	padding-top: 50px;
 }
 
 #wrapper {
+	padding: 0;
+}
+
+.portlet-content {
 	padding: 0;
 }

@@ -1,21 +1,30 @@
 #banner {
-	border-bottom: $borderWidth solid $colorDark;
+	color: $colorLight;
 	position: fixed;
 	width: 100%;
 	z-index: 100;
 
+	a {
+		color: $colorLight;
+		display: block;
+
+		&:hover, &:focus {
+			color: $colorSecondary;
+		}
+
+		&:active {
+			color: darken($colorSecondary, 10%)
+		}
+	}
+
 	.banner-wrapper {
-		background: rgba(red($colorPrimary), green($colorPrimary), blue($colorPrimary), .95);
+		background: $colorPrimary;
 	}
 
 	.banner-content {
 		@include display(flex);
 		@include align-items(center);
 		@include justify-content(space-between);
-
-		a {
-			color: $colorLight;
-		}
 	}
 
 	.child-menu {
@@ -29,18 +38,18 @@
 		}
 	}
 
-	&.nav-item-0 .nav-item-0, &.nav-item-1 .nav-item-1, &.nav-item-2 .nav-item-2, &.nav-item-3 .nav-item-3, &.nav-item-4 .nav-item-4 {
+	&.nav-item-0 .child-menu.nav-item-0, &.nav-item-1 .child-menu.nav-item-1, &.nav-item-2 .child-menu.nav-item-2, &.nav-item-3 .child-menu.nav-item-3, &.nav-item-4 .child-menu.nav-item-4 {
 		max-height: 50px;
 
 		@include transition-delay(0);
 	}
 
 	.child-nav-wrapper {
-		background: rgba(red($colorLight), green($colorLight), blue($colorLight), .95);
+		background: $colorDark;
+	}
 
-		a {
-			color: $colorDark;
-		}
+	.selected {
+		font-weight: bold;
 	}
 
 	ul {
@@ -56,9 +65,8 @@
 		list-style: none;
 	}
 
-	a {
+	a, .root-nav-item > span {
 		padding: $spacingSmall;
-		text-decoration: none;
 	}
 
 	.logo img {
@@ -70,4 +78,16 @@
 #footer {
 	background: $colorDark;
 	color: $colorLight;
+
+	a {
+		color: $colorLight;
+
+		&:hover, &:focus {
+			color: $colorSecondary;
+		}
+
+		&:active {
+			color: darken($colorSecondary, 10%)
+		}
+	}
 }
