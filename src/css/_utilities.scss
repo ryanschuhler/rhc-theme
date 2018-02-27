@@ -575,7 +575,8 @@
 .max-full, .max-lg, .max-med, .max-sm {
 	box-sizing: border-box;
 	margin: 0 auto;
-	padding: 0 $spacingStandard;
+	padding-left: $spacingStandard;
+	padding-right: $spacingStandard;
 }
 
 .max-full {
