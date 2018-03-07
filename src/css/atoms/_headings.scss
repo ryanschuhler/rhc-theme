@@ -6,16 +6,21 @@ h1, h2, h3, h4, h5, h6, .section-heading, .sub-heading {
 
 h1 {
 	font-size: 3rem;
+	font-weight: 900;
 	line-height: 3.25rem;
+	text-transform: uppercase;
 }
 
 h2, .section-heading {
 	font-size: 2.25rem;
+	font-weight: bolder;
 	line-height: 2.5rem;
+	text-transform: uppercase;
 }
 
 h3 {
 	font-size: 1.75rem;
+	font-weight: bold;
 	line-height: 2rem;
 }
 

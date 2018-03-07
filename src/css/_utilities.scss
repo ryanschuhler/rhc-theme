@@ -160,8 +160,16 @@
 	font-weight: bold;
 }
 
-.f-l {
-	font-weight: light;
+.fw-br {
+	font-weight: bolder;
+}
+
+.fw-eb {
+	font-weight: 900;
+}
+
+.fw-l {
+	font-weight: lighter;
 }
 
 .fw-n {
@@ -438,7 +446,7 @@
 
 .pv {
 	padding-bottom: $spacingStandard;
-	padding-left: $spacingStandard;
+	padding-top: $spacingStandard;
 }
 
 .pv-lg {

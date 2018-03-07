@@ -12,6 +12,7 @@ body {
 	font-family: $fontStackDefault;
 	font-size: 18px;
 
+
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 
@@ -20,18 +21,7 @@ body {
 	}
 }
 
-#content {
-	padding-top: 50px;
-}
-
-#wrapper {
+#wrapper, .portlet, .portlet-content {
 	padding: 0;
-}
-
-.portlet {
 	margin: 0;
-}
-
-.portlet-content {
-	padding: 0;
 }

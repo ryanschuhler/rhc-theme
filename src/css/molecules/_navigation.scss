@@ -18,7 +18,7 @@
 	}
 
 	.banner-wrapper {
-		background: $colorPrimary;
+		background: rgba(red($colorPrimary), green($colorPrimary), blue($colorPrimary), .95);
 	}
 
 	.banner-content {
@@ -45,7 +45,7 @@
 	}
 
 	.child-nav-wrapper {
-		background: $colorDark;
+		background: rgba(red($colorDark), green($colorDark), blue($colorDark), .95);
 	}
 
 	.selected {

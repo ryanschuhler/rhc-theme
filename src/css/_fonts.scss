@@ -1,4 +1,6 @@
-@include font-face("Metropolis", "../fonts/metropolis/Metropolis-Light", light);
-@include font-face("Metropolis", "../fonts/metropolis/Metropolis-Regular", normal);
-@include font-face("Metropolis", "../fonts/metropolis/Metropolis-RegularItalic", normal, italic);
-@include font-face("Metropolis", "../fonts/metropolis/Metropolis-SemiBold", bold);
+@include font-face("Metropolis", "../fonts/metropolis/Metropolis-Light", 200, lighter);
+@include font-face("Metropolis", "../fonts/metropolis/Metropolis-RegularItalic", 300, italic);
+@include font-face("Metropolis", "../fonts/metropolis/Metropolis-Regular", 400, normal);
+@include font-face("Metropolis", "../fonts/metropolis/Metropolis-SemiBold", 600, bold);
+@include font-face("Metropolis", "../fonts/metropolis/Metropolis-Bold", 800, bolder);
+@include font-face("Metropolis", "../fonts/metropolis/Metropolis-ExtraBold", 900);
