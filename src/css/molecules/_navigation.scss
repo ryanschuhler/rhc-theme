@@ -31,7 +31,7 @@
 		max-height: 0;
 		overflow: hidden;
 
-		@include transition(max-height .5s .5s);
+		@include transition(max-height .25s);
 
 		a {
 			padding: $spacingTiny;
@@ -66,6 +66,7 @@
 	}
 
 	a, .root-nav-item > span {
+		display: block;
 		padding: $spacingSmall;
 	}
 
