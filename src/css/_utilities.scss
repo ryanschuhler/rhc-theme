@@ -28,6 +28,32 @@
 	box-sizing: border-box;
 }
 
+/* ---------- Boxes ---------- */
+
+.background-overlay {
+	position: relative;
+
+	&:before {
+		background: black;
+		bottom: 0;
+		content: "";
+		left: 0;
+		opacity: .7;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.hover-elevate {
+	@include transition(all 0.2s);
+
+	&:focus, &:hover {
+		@include transform(translateY(-5px));
+		@include transition(all 0.2s);
+	}
+}
+
 /* ---------- Colors ---------- */
 
  @include color-util(dark, $colorDark);
