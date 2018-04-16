@@ -1,13 +1,12 @@
 .banner {
 	align-items: center;
-	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	box-sizing: border-box;
 	color: $colorLight;
 	height: 35vw;
 	margin: 0 -10px;
-	max-height: 862px;
+	max-height: 1000px;
 	min-height: 300px;
 	padding: 2em;
 	text-align: center;
@@ -16,6 +15,10 @@
 	@include display(flex);
 	@include flex-wrap(wrap);
 	@include justify-content(center);
+
+	&.background-fixed {
+		background-attachment: fixed;
+	}
 
 	&.bottom {
 		background-position: bottom;

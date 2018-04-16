@@ -38,10 +38,17 @@
 		bottom: 0;
 		content: "";
 		left: 0;
-		opacity: .7;
+		opacity: .5;
 		position: absolute;
 		right: 0;
 		top: 0;
+		transition: opacity;
+	}
+
+	&.hover-elevate, &.play-cover {
+		&:hover:before {
+			opacity: .8;
+		}
 	}
 }
 
@@ -491,6 +498,10 @@
 }
 
 /* ---------- Text ---------- */
+
+.all-caps {
+	text-transform: uppercase;
+}
 
 .tl {
 	text-align: left;
