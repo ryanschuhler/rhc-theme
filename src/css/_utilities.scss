@@ -28,39 +28,6 @@
 	box-sizing: border-box;
 }
 
-/* ---------- Boxes ---------- */
-
-.background-overlay {
-	position: relative;
-
-	&:before {
-		background: black;
-		bottom: 0;
-		content: "";
-		left: 0;
-		opacity: .5;
-		position: absolute;
-		right: 0;
-		top: 0;
-		transition: opacity;
-	}
-
-	&.hover-elevate, &.play-cover {
-		&:hover:before {
-			opacity: .8;
-		}
-	}
-}
-
-.hover-elevate {
-	@include transition(all 0.2s);
-
-	&:focus, &:hover {
-		@include transform(translateY(-5px));
-		@include transition(all 0.2s);
-	}
-}
-
 /* ---------- Colors ---------- */
 
  @include color-util(dark, $colorDark);
@@ -253,6 +220,69 @@
 
 .o-0 {
 	opacity: 0;
+}
+
+/* ---------- Overlays ---------- */
+
+.audio-icon {
+	color: #FFF;
+	height: 45%;
+	left: 50%;
+	position: absolute;
+	top: 15%;
+	transform: translateX(-50%);
+	transition: opacity .25s;
+}
+
+.audio-icon-hover, .background-overlay:hover .audio-icon-initial, .playing-audio .audio-icon-initial {
+	opacity: 0;
+}
+
+.audio-icon-initial, .background-overlay:hover .audio-icon-hover, .playing-audio .audio-icon-hover {
+	opacity: 1;
+}
+
+.background-overlay {
+	position: relative;
+
+	&:before {
+		background: black;
+		bottom: 0;
+		content: "";
+		left: 0;
+		opacity: .5;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: opacity;
+	}
+
+	&.hover-elevate, &.play-cover {
+		&:hover:before {
+			opacity: .8;
+		}
+	}
+}
+
+.hover-elevate {
+	@include transition(all 0.2s);
+
+	&:focus, &:hover {
+		@include transform(translateY(-5px));
+		@include transition(all 0.2s);
+	}
+}
+
+.play-cover {
+	background-position: center;
+	background-size: contain;
+	cursor: pointer;
+	padding-top: 65%;
+
+	audio {
+		bottom: 0;
+		position: absolute;
+	}
 }
 
 /* ---------- Spacing ---------- */
