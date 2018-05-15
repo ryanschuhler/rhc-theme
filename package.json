@@ -8,13 +8,13 @@
     "baseTheme": "styled",
     "screenshot": "",
     "templateLanguage": "ftl",
-    "version": "7.0",
-    "rubySass": true
+    "version": "7.0"
   },
   "dependencies": {
+    "browser-sync": "^2.24.4",
     "gulp": "^3.8.10",
-    "gulp-ruby-sass": "^2.1.1",
-    "liferay-theme-tasks": "^1.5.0"
+    "liferay-theme-tasks": "^8.0.0-alpha.4",
+    "npm": "^6.0.1"
   },
   "publishConfig": {
     "tag": "7_0_x"

@@ -22,14 +22,19 @@
 	}
 
 	.banner-content {
-		@include display(flex);
 		@include align-items(center);
+		@include display(flex);
 		@include justify-content(space-between);
 	}
 
 	.child-menu {
+		background: rgba(red($colorDark), green($colorDark), blue($colorDark), .95);
+		left: 0;
 		max-height: 0;
 		overflow: hidden;
+		position: absolute;
+		top: 100%;
+		width: 100%;
 
 		@include transition(max-height .25s);
 
@@ -38,22 +43,24 @@
 		}
 	}
 
-	&.nav-item-0 .child-menu.nav-item-0, &.nav-item-1 .child-menu.nav-item-1, &.nav-item-2 .child-menu.nav-item-2, &.nav-item-3 .child-menu.nav-item-3, &.nav-item-4 .child-menu.nav-item-4 {
-		max-height: 50px;
+	.root-nav-item:active, .root-nav-item:focus, .root-nav-item:hover {
+		.child-menu {
+			max-height: 100px;
 
-		@include transition-delay(0);
+			@include transition-delay(0);
+		}
 	}
 
-	.child-nav-wrapper {
-		background: rgba(red($colorDark), green($colorDark), blue($colorDark), .95);
+	.root-nav-item {
+		position: static;
 	}
 
-	.selected {
+	.selected > span {
 		font-weight: bold;
 	}
 
 	ul {
-		margin: 0;
+		margin-bottom: 0;
 		width: 100%;
 
 		@include display(flex);
@@ -73,6 +80,44 @@
 	.logo img {
 		height: 40px;
 		width: auto;
+	}
+
+	.mobile-nav-trigger {
+		display: none;
+	}
+
+	@media all and (max-width: $breakpointTablet) {
+		#navigation {
+			background: $colorLight;
+			height: calc(100vh - 100%);
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			overflow: auto;
+
+			&:not(.show-nav) {
+				display: none;
+			}
+
+			a, li {
+				color: $colorDark;
+			}
+
+			ul {
+				display: block;
+			}
+
+			.child-menu {
+				background: none;
+				max-height: none;
+				position: relative;
+			}
+		}
+
+		.mobile-nav-trigger {
+			display: block;
+		}
 	}
 }
 

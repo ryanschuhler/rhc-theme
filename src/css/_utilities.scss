@@ -176,6 +176,10 @@
 	font-weight: normal;
 }
 
+.fw-sb {
+	font-weight: 600;
+}
+
 /* ---------- Opacity ---------- */
 
 .o-100 {
@@ -275,15 +279,20 @@
 
 .play-cover {
 	background-position: center;
-	background-size: contain;
+	background-size: cover;
 	cursor: pointer;
-	padding-top: 65%;
+	height: 15vw;
+
+	@include respond-to(phone) {
+		height: 50vw;
+	}
 
 	audio {
 		bottom: 0;
 		position: absolute;
 	}
 }
+
 
 /* ---------- Spacing ---------- */
 
@@ -555,6 +564,12 @@
 
 .no-underline {
 	text-decoration: none;
+}
+
+@media all and (max-width: $breakpointTablet) {
+	.responsive-text-center {
+		text-align: center;
+	}
 }
 
 /* ---------- Width ---------- */
