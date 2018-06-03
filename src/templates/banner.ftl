@@ -2,7 +2,8 @@
 	<div class="banner-wrapper">
 		<div class="banner-content max-full">
 			<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />" tabindex="0">
-				<img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
+				<img alt="${logo_description}" class="logo-full" src="${images_folder}/custom/rhc_logo.png" />
+				<img alt="${logo_description}" class="logo-icon" src="${images_folder}/custom/rhc_logo_sm.png" />
 			</a>
 
 			<a class="mobile-nav-trigger" onclick="document.querySelector('#navigation').classList.toggle('show-nav');" tabindex="0">

@@ -45,7 +45,7 @@
 
 	.root-nav-item:active, .root-nav-item:focus, .root-nav-item:hover {
 		.child-menu {
-			max-height: 100px;
+			max-height: 60px;
 
 			@include transition-delay(0);
 		}
@@ -82,6 +82,10 @@
 		width: auto;
 	}
 
+	.logo-icon {
+		display: none;
+	}
+
 	.mobile-nav-trigger {
 		display: none;
 	}
@@ -115,6 +119,14 @@
 			}
 		}
 
+		.logo-full {
+			display: none;
+		}
+
+		.logo-icon {
+			display: block;
+		}
+
 		.mobile-nav-trigger {
 			display: block;
 		}
@@ -135,6 +147,17 @@
 
 		&:active {
 			color: darken($colorSecondary, 10%)
+		}
+	}
+
+	.logo {
+		height: auto;
+		padding-bottom: $spacingStandard;
+	}
+
+	@media all and (max-width: $breakpointTablet) {
+		&, nav {
+			text-align: center;
 		}
 	}
 }
